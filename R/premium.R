@@ -117,7 +117,7 @@ format_from_to_date <- function(x = NULL) {
 #' }
 #'
 #' @export
-search_fullarchive <- function(q, n = 100, fromDate = NULL, toDate = NULL,
+search_fullarchive <- function(q, n = 500, fromDate = NULL, toDate = NULL,
   env_name = NULL, safedir = NULL, parse = TRUE, token = NULL) {
   token <- check_token(token)
   if (!length(get_app_secret(token))) {
@@ -222,7 +222,7 @@ search_fullarchive <- function(q, n = 100, fromDate = NULL, toDate = NULL,
 #' }
 #'
 #' @export
-search_30day <- function(q, n = 100, fromDate = NULL, toDate = NULL,
+search_30day <- function(q, n = 500, fromDate = NULL, toDate = NULL,
                           env_name = NULL, safedir = NULL,
                           parse = TRUE,
                           token = NULL) {
