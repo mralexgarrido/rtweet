@@ -134,6 +134,7 @@ scroller <- function(url, n, n.times, type = NULL, ..., verbose = TRUE, safedir 
       }
       saveas <- paste0(format(Sys.time(), "%Y%m%d%H%M%S"), "-", i, ".rds")
       saveRDS(x[[i]], file.path(safedir, saveas))
+      Sys.sleep(5)
     }
 
     # if (type %in% c("premium", "fullarchive", "30days")) {
@@ -183,7 +184,7 @@ unique_id_count <- function(x, type = NULL) {
     if (type == "search") return(100)
     if (type == "full") return(100)
     if (type == "premium") return(100)
-    if (type == "30day") return(100)
+    if (type == "30day") return(500)
     if (type == "timeline") return(200)
     if (type == "followers") return(5000)
   }
