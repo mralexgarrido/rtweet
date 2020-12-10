@@ -250,7 +250,8 @@ search_30day <- function(q, n = 100, fromDate = NULL, toDate = NULL,
     premium = premium_api("30day", env_name),
     parse = FALSE, n = n,
     safedir = safedir,
-    token = token)
+    token = token,
+    retryonratelimit = TRUE)
   if (parse) {
     np <- get_next_page(r)
     r <- tweets_with_users(r)
