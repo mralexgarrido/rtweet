@@ -257,4 +257,9 @@ search_30day <- function(q, n = 500, fromDate = NULL, toDate = NULL,
     attr(r, "next_page") <- np
   }
   r
+# Sleep 5 second between search requests, limiting api hits to no more than 30 per minute
+# API says up to 60 per minute are allowed so this is a conservative strategy
+# https://developer.twitter.com/en/docs/tweets/search/api-reference/premium-search#CountsEndpoint
+    print("sleeping 5 secounds")
+    Sys.sleep(5)  
 }
