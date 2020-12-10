@@ -233,7 +233,7 @@ search_tweets_ <- function(q = "",
                            include_rts = TRUE,
                            parse = TRUE,
                            token = NULL,
-                           retryonratelimit = FALSE,
+                           retryonratelimit = TRUE,
                            verbose = TRUE,
                            ...) {
 
